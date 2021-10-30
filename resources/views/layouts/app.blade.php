@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @livewireStyles
 </head>
 <body>
     <div id="app">
@@ -77,7 +78,9 @@
 
         <main class="py-4">
             @yield('content')
+            @livewire('sum-form')
         </main>
+        @livewireScripts
     </div>
 </body>
 </html>
