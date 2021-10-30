@@ -13,9 +13,15 @@
                         @csrf
                         <div class="form-group">
                             <input type="number" placeholder="Ingresa el número a" name="a" class="form-control">
+                            @error('a')
+                                <span class="text-danger"> {{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <input type="number" placeholder="Ingresa el número b" name="b" class="form-control">
+                            @error('b')
+                                <span class="text-danger"> {{ $message }}</span>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Guardar</button>
                     </form>

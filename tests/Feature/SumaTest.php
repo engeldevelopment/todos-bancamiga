@@ -9,7 +9,9 @@ use Livewire\Livewire;
 use Tests\TestCase;
 
 class SumaTest extends TestCase
-{   /** @test */
+{   
+    
+    /** @test */
     public function sumarDosNumeros()
     {
         $response = $this->post(route("sumar"), [
