@@ -78,7 +78,6 @@
 
         <main class="py-4">
             @yield('content')
-            @livewire('sum-form')
         </main>
         @livewireScripts
     </div>
