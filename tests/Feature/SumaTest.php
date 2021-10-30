@@ -12,10 +12,13 @@ class SumaTest extends TestCase
 {   /** @test */
     public function sumarDosNumeros()
     {
-        Livewire::test(SumaForm::class)
-            ->set("numberA", "23")
-            ->set("numberA", "23")
-            ->call("sum")
-            ->assertSee("46");
+        $response = $this->post(route("sumar"), [
+            "a" => "12",
+            "b" => "12",
+        ]);
+
+        $response->assertSee("24")
+            ->assertSee("Regresar");
+            
     }
 }
